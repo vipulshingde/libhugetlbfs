@@ -231,7 +231,7 @@ void setup_mappings(int count)
 		char *size = map_size[MAP_BSS];
 		if (map_size[MAP_DATA])
 			size = map_size[MAP_DATA];
-		if (map_size[MAP_DATA] != map_size[MAP_BSS])
+		if (strcmp(map_size[MAP_DATA], map_size[MAP_BSS]) != 0)
 			WARNING("data and bss remapped together in %s\n", size);
 
 		if (size == DEFAULT_SIZE)
